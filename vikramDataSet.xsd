@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="vikramDataSet" targetNamespace="http://tempuri.org/vikramDataSet.xsd" xmlns:mstns="http://tempuri.org/vikramDataSet.xsd" xmlns="http://tempuri.org/vikramDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="vikramConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="vikramConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MachineRenting.Properties.Settings.GlobalReference.Default.vikramConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bill_item_detailsTableAdapter" GeneratorDataComponentClassName="bill_item_detailsTableAdapter" Name="bill_item_details" UserDataComponentName="bill_item_detailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="vikramConnectionString (Settings)" DbObjectName="vikram.bill_item_details" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `bill_no`, `machine_code`, `quantity`, `rate`, `status`, `remarks` FROM `bill_item_details`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="billdetailsTableAdapter" GeneratorDataComponentClassName="billdetailsTableAdapter" Name="billdetails" UserDataComponentName="billdetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="vikramConnectionString (Settings)" DbObjectName="vikram.billdetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `bill_no`, `CustomerID`, `Remarks`, `Total`, `Balance` FROM `billdetails`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="vikramDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="vikramDataSet" msprop:Generator_UserDSName="vikramDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="bill_item_details" msprop:Generator_TableClassName="bill_item_detailsDataTable" msprop:Generator_TableVarName="tablebill_item_details" msprop:Generator_TablePropName="bill_item_details" msprop:Generator_RowDeletingName="bill_item_detailsRowDeleting" msprop:Generator_RowChangingName="bill_item_detailsRowChanging" msprop:Generator_RowEvHandlerName="bill_item_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="bill_item_detailsRowDeleted" msprop:Generator_UserTableName="bill_item_details" msprop:Generator_RowChangedName="bill_item_detailsRowChanged" msprop:Generator_RowEvArgName="bill_item_detailsRowChangeEvent" msprop:Generator_RowClassName="bill_item_detailsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="billdetails" msprop:Generator_TableClassName="billdetailsDataTable" msprop:Generator_TableVarName="tablebilldetails" msprop:Generator_TablePropName="billdetails" msprop:Generator_RowDeletingName="billdetailsRowDeleting" msprop:Generator_RowChangingName="billdetailsRowChanging" msprop:Generator_RowEvHandlerName="billdetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="billdetailsRowDeleted" msprop:Generator_UserTableName="billdetails" msprop:Generator_RowChangedName="billdetailsRowChanged" msprop:Generator_RowEvArgName="billdetailsRowChangeEvent" msprop:Generator_RowClassName="billdetailsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
